@@ -1,0 +1,20 @@
+{
+  "name": "at_in_js_homework",
+  "version": "1.0.0",
+  "description": "https://github.com/Loriisokay/AT_in_JS_Homework.git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Loriisokay/AT_in_JS_Homework.git"
+  },
+  "keywords": [],
+  "author": "Larissa Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Loriisokay/AT_in_JS_Homework/issues"
+  },
+  "homepage": "https://github.com/Loriisokay/AT_in_JS_Homework#readme"
+}
