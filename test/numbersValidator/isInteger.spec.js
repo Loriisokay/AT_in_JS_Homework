@@ -11,13 +11,13 @@ afterEach(() => {
 });
 
 describe('isInteger positive tests', () => {
-  it('should return true if provided with an integer', () => {
+  it('should return true if provided with a positive integer', () => {
     const check = 7;
     const validationResults = validator.isInteger(check);
     expect(validationResults).to.be.equal(true);
   });
 
-  it('should return true if provided with an integer', () => {
+  it('should return true if provided with a negative integer', () => {
     const check = -7;
     const validationResults = validator.isInteger(check);
     expect(validationResults).to.be.equal(true);
