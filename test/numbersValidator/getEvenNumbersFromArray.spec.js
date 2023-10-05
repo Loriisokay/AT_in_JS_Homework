@@ -1,16 +1,16 @@
 const { expect } = require('chai');
 const NumbersValidator = require('../../app/numbers_validator.js');
 
+let validator;
+beforeEach(() => {
+  validator = new NumbersValidator();
+});
+
+afterEach(() => {
+  validator = null;
+});
+
 describe('getEvenNumbersFromArray positive tests', () => {
-  let validator;
-  beforeEach(() => {
-    validator = new NumbersValidator();
-  });
-
-  afterEach(() => {
-    validator = null;
-  });
-
   it('should return an array of even numbers when provided with an array of odd and even numbers', () => {
     const check = [1, 2, 3, 4, 5, 6, 7, 8];
     const even = [2, 4, 6, 8];
@@ -26,15 +26,6 @@ describe('getEvenNumbersFromArray positive tests', () => {
 });
 
 describe('getEvenNumbersFromArray negative tests', () => {
-  let validator;
-  beforeEach(() => {
-    validator = new NumbersValidator();
-  });
-
-  afterEach(() => {
-    validator = null;
-  });
-
   it('should throw an error if provided with an integer', () => {
     const check = 2;
     expect(() => {

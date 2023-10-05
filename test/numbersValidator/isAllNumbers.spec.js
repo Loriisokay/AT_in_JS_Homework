@@ -1,16 +1,16 @@
 const { expect } = require('chai');
 const NumbersValidator = require('../../app/numbers_validator.js');
 
+let validator;
+beforeEach(() => {
+  validator = new NumbersValidator();
+});
+
+afterEach(() => {
+  validator = null;
+});
+
 describe('isAllNumbers positive tests', () => {
-  let validator;
-  beforeEach(() => {
-    validator = new NumbersValidator();
-  });
-
-  afterEach(() => {
-    validator = null;
-  });
-
   it('should return true when provided with an array', () => {
     const check = [0, 1, 2, 3, 4];
     const validationResults = validator.isAllNumbers(check);
@@ -19,15 +19,6 @@ describe('isAllNumbers positive tests', () => {
 });
 
 describe('isAllNumbers negative tests', () => {
-  let validator;
-  beforeEach(() => {
-    validator = new NumbersValidator();
-  });
-
-  afterEach(() => {
-    validator = null;
-  });
-
   it('should return false if provided with an array containing a string', () => {
     const check = [0, 1, 2, 'not a number'];
     const validationResults = validator.isAllNumbers(check);

@@ -1,16 +1,16 @@
 const { expect } = require('chai');
 const NumbersValidator = require('../../app/numbers_validator.js');
 
+let validator;
+beforeEach(() => {
+  validator = new NumbersValidator();
+});
+
+afterEach(() => {
+  validator = null;
+});
+
 describe('isNumberEven positive tests', () => {
-  let validator;
-  beforeEach(() => {
-    validator = new NumbersValidator();
-  });
-
-  afterEach(() => {
-    validator = null;
-  });
-
   it('should return true when provided with an even number', () => {
     const check = 4;
     const validationResults = validator.isNumberEven(check);
@@ -19,15 +19,6 @@ describe('isNumberEven positive tests', () => {
 });
 
 describe('isNumberEven negative tests', () => {
-  let validator;
-  beforeEach(() => {
-    validator = new NumbersValidator();
-  });
-
-  afterEach(() => {
-    validator = null;
-  });
-
   it('should return false when provided with an even number', () => {
     const check = 3;
     const validationResults = validator.isNumberEven(check);

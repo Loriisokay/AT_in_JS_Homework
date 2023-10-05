@@ -1,1 +1,7 @@
 node_modules
+coverage
+mochawesome-report
+.c8rc.json
+.eslintignore
+.eslintrc.json
+.mocharc.json

@@ -1,16 +1,16 @@
 const { expect } = require('chai');
 const NumbersValidator = require('../../app/numbers_validator.js');
 
+let validator;
+beforeEach(() => {
+  validator = new NumbersValidator();
+});
+
+afterEach(() => {
+  validator = null;
+});
+
 describe('isInteger positive tests', () => {
-  let validator;
-  beforeEach(() => {
-    validator = new NumbersValidator();
-  });
-
-  afterEach(() => {
-    validator = null;
-  });
-
   it('should return true if provided with an integer', () => {
     const check = 7;
     const validationResults = validator.isInteger(check);
@@ -25,15 +25,6 @@ describe('isInteger positive tests', () => {
 });
 
 describe('isInteger negative tests', () => {
-  let validator;
-  beforeEach(() => {
-    validator = new NumbersValidator();
-  });
-
-  afterEach(() => {
-    validator = null;
-  });
-
   it('should throw an error if provided with a string', () => {
     const check = '7';
     expect(() => {
