@@ -12,12 +12,14 @@ describe('isInteger positive tests', () => {
   });
 
   it('should return true if provided with an integer', () => {
-    const validationResults = validator.isInteger(7);
+    const check = 7;
+    const validationResults = validator.isInteger(check);
     expect(validationResults).to.be.equal(true);
   });
 
   it('should return true if provided with an integer', () => {
-    const validationResults = validator.isInteger(-7);
+    const check = -7;
+    const validationResults = validator.isInteger(check);
     expect(validationResults).to.be.equal(true);
   });
 });

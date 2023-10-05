@@ -12,7 +12,8 @@ describe('isNumberEven positive tests', () => {
   });
 
   it('should return true when provided with an even number', () => {
-    const validationResults = validator.isNumberEven(4);
+    const check = 4;
+    const validationResults = validator.isNumberEven(check);
     expect(validationResults).to.be.equal(true);
   });
 });
@@ -28,7 +29,8 @@ describe('isNumberEven negative tests', () => {
   });
 
   it('should return false when provided with an even number', () => {
-    const validationResults = validator.isNumberEven(3);
+    const check = 3;
+    const validationResults = validator.isNumberEven(check);
     expect(validationResults).to.be.equal(false);
   });
 

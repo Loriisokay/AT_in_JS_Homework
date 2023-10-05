@@ -12,7 +12,8 @@ describe('isAllNumbers positive tests', () => {
   });
 
   it('should return true when provided with an array', () => {
-    const validationResults = validator.isAllNumbers([0, 1, 2, 3, 4]);
+    const check = [0, 1, 2, 3, 4];
+    const validationResults = validator.isAllNumbers(check);
     expect(validationResults).to.be.equal(true);
   });
 });
@@ -28,17 +29,20 @@ describe('isAllNumbers negative tests', () => {
   });
 
   it('should return false if provided with an array containing a string', () => {
-    const validationResults = validator.isAllNumbers([0, 1, 2, 'not a number']);
+    const check = [0, 1, 2, 'not a number'];
+    const validationResults = validator.isAllNumbers(check);
     expect(validationResults).to.be.equal(false);
   });
 
   it('should return false if provided with an array containing a boolean', () => {
-    const validationResults = validator.isAllNumbers([0, 1, 2, true]);
+    const check = [0, 1, 2, true];
+    const validationResults = validator.isAllNumbers(check);
     expect(validationResults).to.be.equal(false);
   });
 
   it('should return false if provided with an array containing an object', () => {
-    const validationResults = validator.isAllNumbers([0, 1, 2, { not: 'an array' }]);
+    const check = [0, 1, 2, { not: 'an array' }];
+    const validationResults = validator.isAllNumbers(check);
     expect(validationResults).to.be.equal(false);
   });
 

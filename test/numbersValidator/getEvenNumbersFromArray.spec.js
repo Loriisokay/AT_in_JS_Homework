@@ -12,13 +12,16 @@ describe('getEvenNumbersFromArray positive tests', () => {
   });
 
   it('should return an array of even numbers when provided with an array of odd and even numbers', () => {
-    const validationResults = validator.getEvenNumbersFromArray([1, 2, 3, 4, 5, 6, 7, 8]);
-    expect(validationResults).to.be.eql([2, 4, 6, 8]);
+    const check = [1, 2, 3, 4, 5, 6, 7, 8];
+    const even = [2, 4, 6, 8];
+    const validationResults = validator.getEvenNumbersFromArray(check);
+    expect(validationResults).to.be.eql(even);
   });
 
   it('should return an array of even numbers when provided with an array of even numbers', () => {
-    const validationResults = validator.getEvenNumbersFromArray([2, 4, 6, 8]);
-    expect(validationResults).to.be.eql([2, 4, 6, 8]);
+    const check = [2, 4, 6, 8];
+    const validationResults = validator.getEvenNumbersFromArray(check);
+    expect(validationResults).to.be.eql(check);
   });
 });
 
