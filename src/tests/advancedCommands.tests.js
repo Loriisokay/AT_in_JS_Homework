@@ -78,10 +78,9 @@ describe('test key presses with performActions()', () => {
 
   it('should track key presses', async () => {
     const arrayOfletters = ['A', 'B', 'C', 'D', 'E'];
-    let finalResult = '';
     await keyPressesPage.input.click();
 
-    for (const letter in arrayOfletters) {
+    for (const letter of arrayOfletters) {
       await browser.performActions([
         {
           type: 'key',
@@ -96,9 +95,7 @@ describe('test key presses with performActions()', () => {
       ]);
       const recievedResult = `You entered: ${letter}`;
       await expect(keyPressesPage.result).toHaveText(recievedResult);
-      finalResult += letter;
     };
-
     await browser.releaseActions();   
   });
 });
