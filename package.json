@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha",
-    "wdio": "wdio run ./src/config/wdio.conf.js" 
+    "wdio": "wdio run ./src/config/wdio.conf.js"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
     "@wdio/mocha-framework": "^8.16.22",
     "@wdio/spec-reporter": "^8.16.22",
     "eslint": "^8.51.0"
+  },
+  "dependencies": {
+    "wdio-robonut-service": "^0.7.3"
   }
 }

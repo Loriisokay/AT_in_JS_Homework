@@ -1,5 +1,4 @@
 const BasePage = require('./base.page');
-
 class EntryAdPage extends BasePage {
   get heading() { return $('h3') };
   get clickBtn() { return $('.example > p > #restart-ad') };
